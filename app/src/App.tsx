@@ -8,6 +8,7 @@ import ExperienceSection from './sections/ExperienceSection';
 import TestimonialsSection from './sections/TestimonialsSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -44,6 +45,7 @@ export default function App() {
       <ContactSection />
       <Footer />
       <ChatWidget />
+      <SpeedInsights />
     </div>
   );
 }
