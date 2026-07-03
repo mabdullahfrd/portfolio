@@ -64,11 +64,12 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         </div>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Theme toggle - single clean icon button */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-[#F3F4F6] dark:hover:bg-zinc-800 text-[#1A1A1B] dark:text-white transition-colors hover:scale-105 active:scale-95"
-            aria-label="Toggle theme"
+            className="p-2 rounded-full hover:bg-[#F3F4F6] dark:hover:bg-zinc-800 text-[#1A1A1A] dark:text-white transition-colors"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
@@ -86,11 +87,11 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-[#1A1A1A] dark:text-white"
+            className="md:hidden p-2 rounded-full hover:bg-[#F3F4F6] dark:hover:bg-zinc-800 text-[#1A1A1A] dark:text-white transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
