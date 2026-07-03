@@ -199,10 +199,10 @@ export default function HeroSection() {
                       href={href}
                       target={href.startsWith('mailto') ? undefined : '_blank'}
                       rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                      className="w-10 h-10 flex items-center justify-center border border-[#E5E5E5] dark:border-zinc-800 rounded-full hover:border-[#E53E3E] hover:bg-[#E53E3E] hover:text-white group transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 flex items-center justify-center border border-[#E5E5E5] dark:border-zinc-600 rounded-full text-[#666666] dark:text-white hover:border-[#E53E3E] hover:bg-[#E53E3E] hover:text-white dark:hover:text-white transition-all duration-300 hover:scale-110"
                       aria-label={label}
                     >
-                      <Icon size={16} className="text-[#666666] dark:text-zinc-400 group-hover:text-white transition-colors" />
+                      <Icon size={16} />
                     </a>
                   ))}
                 </div>
