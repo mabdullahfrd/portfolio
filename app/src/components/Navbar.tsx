@@ -35,7 +35,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-[1200px] mx-auto w-full px-6 flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto w-full px-4 sm:px-6 flex items-center justify-between">
         {/* Brand */}
         <a
           href="#home"
@@ -65,26 +65,13 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
 
         {/* Right Actions */}
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-[#F3F4F6] dark:hover:bg-zinc-800 text-[#1A1A1B] dark:text-white transition-colors hover:scale-105 active:scale-95"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            {/* Switch */}
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={theme === 'dark'}
-                onChange={toggleTheme}
-                className="sr-only peer"
-              />
-              <div className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 transition-colors"></div>
-              <div className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
-            </label>
-          </div>
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full hover:bg-[#F3F4F6] dark:hover:bg-zinc-800 text-[#1A1A1B] dark:text-white transition-colors hover:scale-105 active:scale-95"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
 
           {/* LinkedIn (desktop only) */}
           <a

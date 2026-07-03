@@ -72,7 +72,7 @@ export default function ChatWidget() {
       <div
         className={`chat-panel mb-3 ${chatState === 'expanded' ? 'open' : ''}`}
       >
-        <div className="w-[340px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.15)] overflow-hidden border border-[#F0F0F0]">
+        <div className="w-[calc(100vw-3rem)] max-w-[340px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.15)] overflow-hidden border border-[#F0F0F0]">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-[#F0F0F0] bg-gradient-to-r from-[#1A1A1A] to-[#333333]">
             <div className="flex items-center gap-2">

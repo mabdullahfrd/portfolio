@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="relative py-24 lg:py-32 overflow-hidden bg-white">
+    <section id="testimonials" className="relative py-24 lg:py-32 overflow-hidden bg-white dark:bg-[#121212] transition-colors duration-300">
       <SectionWatermark text="WORDS" />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
